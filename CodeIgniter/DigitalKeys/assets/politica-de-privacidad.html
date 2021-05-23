@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio -  DigitalKey</title>
+    <link rel="icon" href="img/logo4.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="page-top">&nbsp; </div>
+    <header class="barra-navegacion pt-2 fixed-top">
+        <nav class="navbar navbar-expand  topbar mb-2">
+            <div class="barra-principal">
+                <div class=" row mx-auto">
+
+                    <a class="navbar-brand" href="#page-top"><img class="img-logo" src="img/logo2.png" alt="Logo de la empresa" title="Logo"/></a>
+
+                    <form class="d-none d-md-inline-block form-inline mt-3 mw-100 navbar-search barra-busqueda" action="buscarInmueble.php" method="post">
+                        <div class="input-group" data-children-count="1">
+                            <input type="text" id="buscar" name="buscar" class="form-control borde-buscar bg-light border-0 small" placeholder="Buscar">
+                            <div class="input-group-append btn-lupa">
+                                <button class="btn" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="navbar-nav barra-botones">
+
+                        <li class="nav-item dropdown no-arrow d-md-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group" data-children-count="1">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn bg-light" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link" href="mostrarFavoritos.php" id="alertsDropdown" role="button">
+                                <i class="fas fa-fw fa-sign-in-alt"></i>
+                                Inciar Sesion
+                                <span class="badge badge-danger badge-counter"></span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link" href="register.php">
+                                <i class="fas fa-fw fa-address-card"></i>
+                                Registrarse
+                            </a>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="divisoria-2"><div class="linea-divisoria-2"></div></div>
+
+        <!--      <nav class="navbar navbar-expand-lg navbar-light bg-gris-oscuro fixed-top">
+                            <a class="navbar-brand" href="#"><a href="#page-top"><img class="img-logo" src="img/logo.png" alt="Logo de la empresa" title="Logo"/></a></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </nav> -->
+    </header>
+    <div class="categorias" >
+        <nav class="navbar navbar-expand-lg mb-1">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars burger"></i>
+            </button>
+            <div class="barra-secundaria collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="container flex">
+                    <div class="centrar-txt">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link" href="componentes.html#page-top">
+                                    PC
+                                </a>
+                                <ul class="bg-morado-azul-item">
+                                    <!--<div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                    <a class="dropdown-item" href="componentes.html#cpu-y-moba">PC GAMES</a>
+                                    <a class="dropdown-item" href="componentes.html#memorias">DLC's</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link" href="perifericos.html#page-top">
+                                    PLAYSTATION
+                                </a>
+                                <ul class="bg-morado-azul-item">
+                                    <!--<div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                    <a class="dropdown-item" href="perifericos.html#ratones">PS GAMES</a>
+                                    <a class="dropdown-item" href="perifericos.html#ratones">PSPLUS</a>
+                                    <a class="dropdown-item" href="perifericos.html#teclados">PSNOW</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link" href="contacto.html#page-top">
+                                    XBOX
+                                </a>
+                                <ul class="bg-morado-azul-item">
+                                    <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                    <a class="dropdown-item" href="contacto.html#equipo">XBOX GAMES</a>
+                                    <a class="dropdown-item" href="contacto.html#localizacion">XBOXLive</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link" href="contacto.html#page-top">
+                                    NINTENDO
+                                </a>
+                                <ul class="bg-morado-azul-item">
+                                    <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                    <a class="dropdown-item" href="contacto.html#equipo">GAMES</a>
+                                    <a class="dropdown-item" href="contacto.html#equipo">SWITCH</a>
+                                    <a class="dropdown-item" href="contacto.html#mensaje">ONLINE</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link" href="contacto.html#page-top">
+                                    Herramientas
+                                </a>
+                                <ul class="bg-morado-azul-item">
+                                    <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                    <a class="dropdown-item" href="contacto.html#equipo">Claves <br>Windows</a>
+                                    <a class="dropdown-item" href="contacto.html#equipo">Licencias</a>
+                                    <a class="dropdown-item" href="contacto.html#mensaje">Office</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link" href="contacto.html#page-top">
+                                    Promociones
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="divisoria-2"><div class="linea-divisoria-2"></div></div>
+    </div>
+    <div class="cuerpo">
+        <div class="container espacidado">
+            <div class="divisoria-2"><h3 class="titulo-h3">POLÍTICA DE PRIVACIDAD</h3><div class="linea-divisoria-4"></div></div>
+
+            <div class="container espacidado">
+                <div class="temas-legales">
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Versión 1.1, última enmienda 2020-03-04</font></font></p>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En esta política de privacidad, nosotros, UAB Helis Play, código de entidad legal 304923415, con nuestro domicilio social en Gyneju St. 4-333, Vilnius, República de Lituania (" </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ENEBA</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> "), explicamos cómo manejamos sus datos personales cuando visita nuestro sitio web y utilice nuestros servicios.</font></font></p>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Le pediremos su consentimiento para nuestro uso de cookies de acuerdo con los términos de este aviso cuando visite nuestro sitio web por primera vez.</font></font></p>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nuestro sitio web incorpora controles de privacidad que le brindan controles para decidir cómo procesaremos sus datos personales. </font><font style="vertical-align: inherit;">Mediante el uso de controles de privacidad, puede especificar si desea recibir comunicaciones de marketing directo.</font></font></p>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En este aviso encontrará las respuestas a las siguientes preguntas:</font></font></p>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cómo usamos sus datos;</font></font></strong></li>
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cuando proporcionamos sus datos a otros;</font></font></strong></li>
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cuánto tiempo almacenamos sus datos;</font></font></strong></li>
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cuál es nuestra política de marketing;</font></font></strong></li>
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">qué derechos relacionados con los datos personales posee;</font></font></strong></li>
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cómo usamos las cookies;</font></font></strong></li>
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">otras cuestiones que debes tener en cuenta.</font></font></strong></li>
+                    </ol>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En caso de cualquier consulta o si desea ejercer alguno de sus derechos previstos en este aviso, puede enviar dichas consultas y solicitudes a través de los medios proporcionados en la </font><font style="vertical-align: inherit;">sección </font></font><a href="https://www.eneba.com/contacts" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contactos</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Puede contactarnos con respecto a todos los problemas relacionados con la privacidad por correo electrónico: </font></font><a href="mailto:support@eneba.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">support@eneba.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Todos los términos utilizados en los Términos y Condiciones de ENEBA tienen el mismo significado que en esta Política de Privacidad.</font></font></p>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En el caso de que la Política de privacidad se traduzca a otros idiomas y si existen diferencias entre la versión en inglés y dicha traducción, prevalecerá la versión en inglés, a menos que se indique lo contrario.</font></font></p>
+                    <ol>
+                        <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¿Cómo utilizamos sus datos personales?</font></font></strong>
+                            <ol>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esta sección proporciona la siguiente información:
+                                </font></font><ol style="list-style-type: lower-alpha;">
+                                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">categorías de datos personales que procesamos;</font></font></li>
+                                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">en caso de que los datos personales que no obtuvimos directamente de usted, la fuente y las categorías específicas de esos datos;</font></font></li>
+                                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">los fines para los que podemos procesar sus datos personales; </font><font style="vertical-align: inherit;">y</font></font></li>
+                                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">las bases legales del tratamiento.</font></font></li>
+                                </ol>
+                                </li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Procesamos datos sobre su uso de nuestro sitio web y servicios ("datos de uso"). </font><font style="vertical-align: inherit;">Los datos de uso pueden incluir su dirección IP, ubicación geográfica, tipo y versión de navegador, sistema operativo, fuente de referencia, duración de la visita, visitas a la página y rutas de navegación del sitio web, así como información sobre el tiempo, la frecuencia y el patrón de uso de su servicio. </font><font style="vertical-align: inherit;">Obtenemos dichos datos mediante el uso de cookies y tecnologías similares. </font><font style="vertical-align: inherit;">Procesamos dichos datos para comprender mejor cómo utiliza nuestro sitio web y nuestros servicios. </font><font style="vertical-align: inherit;">La base legal para este procesamiento es nuestro interés legítimo, es decir, monitorear y mejorar nuestro sitio web y nuestros servicios y adaptar los servicios a los intereses individuales de cada usuario.</font></font></li>
+                                <li>We process your account data&nbsp;(“account data”). The account data may include your name and email address, phone number and other data that you provide while registering as well as your purchase history. We obtain such data directly from you. We process account data for the purposes of operating our website, providing our services, ensuring the security of our website and services and communicating with you. The legal basis for this processing is the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract as well as our legitimate interest, namely monitoring and improving our website and services.</li>
+                                <li>We process information relating to provision of services by us to you in our website&nbsp;(“transaction data”). The transaction data may include your contact details, bank account details and the transaction details. The transaction data is processed to supply purchases goods and provide services and keep proper records of those transactions. The legal basis for this processing is the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract and our legitimate interests, namely the proper administration of our website and business.</li>
+                                <li>We process information related to anti-money laundering prevention measures&nbsp;(“AML data”). AML data may additionally include address or residence, ID documentation, including your photo, documents regarding your source of wealth, utility bill and others. We are required by the law to request such information to carry out “know your client” obligations.</li>
+                                <li>We may process information that you provide to us for the purpose of subscribing to our email messages and newsletters&nbsp;(“messaging data”). The messaging data is processed to send you the relevant messages and newsletters. The legal basis for this processing is your consent. Also, if we have already sold goods or provided services for you in our website and you do not object, we may also process messaging data on the basis of our legitimate interest, namely seeking maintain and improve customer relations.</li>
+                                <li>We may process information relating to any communication that you send to us&nbsp;(“correspondence data”). The correspondence data may include the communication content and metadata associated with the communication. In case of communication through our website, the website will generate the metadata associated with communications made using the website contact forms. The correspondence data is processed for the purposes of communicating with you and record-keeping. The legal basis for this processing is our legitimate interests, namely the proper administration of our website and business, ensuring uniform and high quality consultation practice and for investigating disputes between you and our employees.</li>
+                                <li>We may process any of your personal data identified in this notice where necessary for the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure. The legal basis for this processing is our legitimate interests, namely the protection and assertion of our legal rights, your legal rights and the legal rights of others.</li>
+                                <li>We may process any of your personal data identified in this notice where necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, or obtaining professional advice. The legal basis for this processing is our legitimate interests, namely the proper protection of our business against risks.</li>
+                                <li>In addition to the specific purposes for which we may process your personal data set out in this Section, we may also process any of your personal data where such processing is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.</li>
+                            </ol>
+                        </li>
+                        <li><strong>When we provide your data to others?</strong>
+                            <ol>
+                                <li>We may disclose your personal data&nbsp;to any member of our group of companies&nbsp;(including our subsidiaries, our ultimate holding company and all its subsidiaries) insofar as reasonably necessary for the purposes set out in this notice. Such may include internal administration purposes as well as provision/sharing of IT services or data centres in the group.</li>
+                                <li>We may disclose your personal data&nbsp;to our insurers and/or professional advisers&nbsp;insofar as reasonably necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, obtaining professional advice, or the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure.</li>
+                                <li>We may disclose your personal data to our anti-fraud, risks and compliance providers&nbsp;insofar as reasonably necessary for the purposes of protecting your personal data and fulfilling our legal obligations.</li>
+                                <li>We may disclose your personal data&nbsp;to our payment service providers. We will share transaction data with our payment services providers only to the extent necessary for the purposes of processing your payments, transferring funds and dealing with complaints and queries relating to such payments and transfers.</li>
+                                <li>We may disclose your personal data&nbsp;to other service providers&nbsp;insofar as it is reasonably necessary to provide specific services (including, providers of servers and maintenance thereof, email service providers). We take all the necessary measures to ensure that such subcontractors would implement proper organisational and technical measures to ensure security and privacy of your personal data.</li>
+                                <li>In addition to the specific disclosures of personal data set out in this Section, we may disclose your personal data where such disclosure is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.</li>
+                                <li>Persons, indicated in this Section may be established outside the Republic of Lithuania, European Union and European Economic Area. In case we will transfer your personal data to such persons, we will take all the necessary and in the legal acts indicated measures to ensure that your privacy will remain properly secured, including where appropriate, signing standard contractual clauses for transfer of data. To find out more information regarding appropriate safeguards you may contact us via email: <a href="mailto:support@eneba.com">support@eneba.com</a>.</li>
+                            </ol>
+                        </li>
+                        <li><strong>How long we store your data?</strong>
+                            <ol>
+                                <li>Your personal data that we process for any purpose or purposes shall not be kept for longer than is necessary for that purpose or those purposes. In any case it shall be kept for no longer than:
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>account data will be retained for no longer than 5 (five) years following your last update on the account;</li>
+                                        <li>transaction data will be retained for no longer than 10 (ten) years following the end of provision of services;</li>
+                                        <li>AML data&nbsp;will be retained as long as it is necessary to comply with the related legal requirements;</li>
+                                        <li>messaging data&nbsp;will be retained for as long as your Account is active, unless you withdraw your consent earlier;</li>
+                                        <li>correspondence data&nbsp;will be retained for no longer than 6 (six) months following the end of such communication.</li>
+                                    </ol>
+                                </li>
+                                <li>In some cases, it is not possible for us to specify in advance the periods for which your personal data will be retained. I.&nbsp;e. usage data&nbsp;will be retained for as much as will be necessary for the relevant processing purposes.</li>
+                                <li>Notwithstanding the other provisions of this Section, we may retain your personal data where such retention is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Marketing messages</strong>
+                            <ol>
+                                <li>In case you consent, we will send you marketing messages via email and/or leave a notification in an Account to inform you on what we are up to.</li>
+                                <li>Also, if we already have provided services to you and you do not object we will inform you about our other products that might interest you including other information related to such.</li>
+                                <li>You may opt-out of receiving marketing messages at any time.</li>
+                                <li>You may do so by:
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>choosing the relevant link in any of our marketing messages;</li>
+                                        <li>contacting us via means provided in <a href="https://www.eneba.com/contacts" target="_blank" rel="noopener">Contacts</a> section.</li>
+                                    </ol>
+                                </li>
+                                <li>Upon you having fulfilled any of the provided actions we will update your profile to ensure that you will not receive our marketing messages in the future.</li>
+                                <li>Please be informed that as our business activities consists of a network of closely related services, it may take a few days until all the systems are updated, thus you may continue to receive marketing messages while we are still processing your request.</li>
+                                <li>The opt-out of the marketing messages will not stop you from receiving messages directly related to the provision of services.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Your rights</strong>
+                            <ol>
+                                <li>In this Section, we have summarised the rights that you have under data protection laws. Some of the rights are complex thus we only provide the main aspects of such rights. Accordingly, you should read the relevant laws and guidance from the regulatory authorities for a full explanation of these rights.</li>
+                                <li>Your other principal rights under data protection law are the following:
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>the right to access data;</li>
+                                        <li>the right to rectification (note that you may exercise most of this right by logging to your account <a href="https://my.eneba.com" target="_blank" rel="noopener">here</a>;</li>
+                                        <li>the right to erasure of your personal data;</li>
+                                        <li>the right to restrict processing of your personal data;</li>
+                                        <li>the right to object to processing of your personal data;</li>
+                                        <li>the right to data portability;</li>
+                                        <li>the right to complain to a supervisory authority; and</li>
+                                        <li>the right to withdraw consent.</li>
+                                    </ol>
+                                </li>
+                                <li>The right to access data.You have the right to confirmation as to whether or not we process your personal data and, where we do, access to the personal data, together with certain additional information. That additional information includes details of the purposes of the processing, the categories of personal data concerned and the recipients of the personal data. Providing the rights and freedoms of others are not affected, we will supply to you a copy of your personal data. The first copy will be provided free of charge, but additional copies may be subject to a reasonable fee.</li>
+                                <li>The right to rectification. You have the right to have any inaccurate personal data about you rectified and, taking into account the purposes of the processing, to have any incomplete personal data about you completed.</li>
+                                <li>In some circumstances you have the right to the erasure of your personal data. Those circumstances include when: (i) the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed; (ii) you withdraw consent to consent-based processing and there are no other legal basis to process data; (iii) you object to the processing under certain rules of applicable data protection laws; (iv) the processing is for direct marketing purposes; or (v) the personal data have been unlawfully processed. However, there are exclusions of the right to erasure. Such exclusions include when processing is necessary: (i)&nbsp;for exercising the right of freedom of expression and information; (ii)&nbsp;for compliance with our legal obligation; or (iii) for the establishment, exercise or defence of legal claims.</li>
+                                <li>In some circumstances you have the right to restrict the processing of your personal data. Those circumstances are when: (i) you contest the accuracy of the personal data; (ii)&nbsp;processing is unlawful but you oppose erasure; (iii) we no longer need the personal data for the purposes of our processing, but you require personal data for the establishment, exercise or defence of legal claims; and (iv) you have objected to processing, pending the verification of that objection. Where processing has been restricted on this basis, we may continue to store your personal data, however we will only further process such data in any other way: (i) with your consent; (ii) for the establishment, exercise or defence of legal claims; (iii) for the protection of the rights of another person; or (iv) for reasons of important public interest.</li>
+                                <li>You have the right to object to our processing of your personal data&nbsp;on grounds relating to your particular situation, but only to the extent that the legal basis for the processing is that the processing is necessary for: the performance of a task carried out in the public interest or the purposes of the legitimate interests pursued by us or by a third party. If you make such an objection, we will cease to process the personal information unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights and freedoms, or the processing is for the establishment, exercise or defence of legal claims.</li>
+                                <li>You have the right to object to our processing of your personal data for direct marketing purposes&nbsp;(including profiling for direct marketing purposes). If you make such an objection, we will cease to process your personal data for this purpose.</li>
+                                <li>You have the right to object to our processing of your personal data for scientific or historical research purposes or statistical purposes&nbsp;on grounds relating to your particular situation, unless the processing is necessary for the performance of a task carried out for reasons of public interest.</li>
+                                <li>The right to data portability. To the extent that the legal basis for our processing of your personal data is:
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>consent; or</li>
+                                        <li>performance of a contract or steps to be taken at your request prior to entering into a contract, necessary to enter into such,&nbsp;you have the right to receive your personal data from us in a structured, commonly used and machine-readable format. However, this right does not apply where it would adversely affect the rights and freedoms of others.</li>
+                                    </ol>
+                                </li>
+                                <li>If you consider that our processing of your personal information infringes data protection laws, you have a legal right to lodge a complaint with a supervisory authority&nbsp;responsible for data protection. You may do so in the EU member state of your habitual residence, your place of work or the place of the alleged infringement. Our data processing is supervised by State Data Protection Inspectorate of the Republic of Lithuania, registered office at A. Juozapavičiaus St. 6, LT-09310, <a href="http://www.ada.lt/" target="_blank" rel="noopener nofollow noreferrer">www.ada.lt</a>.</li>
+                                <li>To the extent that the legal basis for our processing of your personal information is consent, you have the right to withdraw that consent at any time. Withdrawal will not affect the lawfulness of processing before the withdrawal.</li>
+                                <li>In addition to specific measure provided in this Section or the website you may also exercise any of the rights indicated herein by contacting us via <a href="https://www.eneba.com/contacts" target="_blank" rel="noopener">Contacts</a>.</li>
+                            </ol>
+                        </li>
+                        <li><strong>About cookies</strong>
+                            <ol>
+                                <li>Cookies are small textual files containing identifier that is sent by a web server to your web browser and is stored by the browser. The identifier is then sent back to the server each time the browser requests a page from the server.</li>
+                                <li>Cookies do not typically contain any information that personally identifies a user, but personal information that we store about you may be linked to the information stored in and obtained from cookies.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Cookies that we use</strong>
+                            <p>In the website we use cookies of four main types, for the following purposes:</p>
+                            <ol style="list-style-type: lower-alpha;">
+                                <li>Necessary Cookies – these cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work;</li>
+                                <li>Analytical Cookies – these cookies allow us to count visits and traffic sources, so we can measure and improve the performance of our site. They help us know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies, we will not know when you have visited our site;</li>
+                                <li>Preference cookies – these cookies enable a website to remember information that changes the way the website behaves or looks, like your preferred region.</li>
+                                <li>Marketing cookies – these cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Cookies used by our service providers</strong>
+                            <ol>
+                                <li>Our service providers use cookies and those cookies may be stored on your computer when you visit our website.</li>
+                                <li>We use:
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Hotjar cookies&nbsp;to observe how users interact with our website. Cookies used for this purpose help us observe the performance of the website and analyse how we can improve it. Hotjar stores this information in a pseudonymized user profile. Hotjar does not process this information to identify individual users or to match it with further data on an individual user. You can view the privacy policy of Hotjar <a href="https://www.hotjar.com/legal/policies/privacy" target="_blank" rel="noopener nofollow noreferrer">here</a>;</li>
+                                        <li>Google cookies&nbsp;to observe our website traffic, control advertising cookies, display embedded videos, make the ads you see more relevant to you. Cookies used for this purpose help us measure website performance, properly distribute ads and website content to users. You can view the privacy policy of Google  <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener nofollow noreferrer">here</a>;</li>
+                                        <li>Facebook cookies&nbsp;to manage the display of ads to our users. Cookies used for this purpose help us distinguish users that already use our services and reduce or stop displaying our ads to such users. You can view the privacy policy of Facebook <a href="https://www.facebook.com/about/privacy" target="_blank" rel="noopener nofollow noreferrer">here</a>;</li>
+                                        <li>Criteo cookies&nbsp;to tailor our marketing campaigns and offer relevant ads to our visitors. The technology allows us to collect a limited amount of data relating to your browsing, such as the products you have viewed, put in your shopping cart and purchased. It does not use any data that allows us to identify you directly, such as your first and last name, postal address, email address in plain text, etc. You can view the privacy policy of criteo <a href="https://www.criteo.com/privacy/" target="_blank" rel="noopener nofollow noreferrer">here</a>;</li>
+                                        <li>Microsoft Bing cookies&nbsp;to tailor our marketing campaigns and offer relevant ads to our visitors. Bing Ads wants to assure you that any information that is gathered will remain anonymous and cannot be used to identify you. You can read more about Microsoft Bing advertising privacy policy <a href="https://about.ads.microsoft.com/en-us/resources/policies/microsoft-advertising-privacy-policy" target="_blank" rel="noopener nofollow noreferrer">here</a>;</li>
+                                        <li>PostAffiliatePro cookies&nbsp;to track our marketing channel performance and attribute earnings based on the sales performed. You can view the privacy policy of the PostAffiliatePro <a href="https://www.postaffiliatepro.com/privacy-policy/" target="_blank" rel="noopener nofollow noreferrer">here</a>;</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><strong>How can you manage cookies?</strong>
+                            <ol>
+                                <li>Most browsers allow you to refuse to accept cookies and to delete cookies. The methods for doing so vary from browser to browser, and from version to version. You can however obtain up-to-date information about blocking and deleting cookies via information provided in the relevant browser website, for example <a href="https://support.google.com/chrome/answer/95647?hl=en" target="_blank" rel="noopener nofollow noreferrer">Chrome</a>; <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noopener nofollow noreferrer">Firefox</a>; <a href="https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener nofollow noreferrer">Internet Explorer</a>; <a href="https://support.apple.com/kb/PH21411" target="_blank" rel="noopener nofollow noreferrer">Safari</a>.</li>
+                                <li>Blocking all cookies will have a negative impact upon the usability of many websites.</li>
+                                <li>If you block cookies, you will not be able to use all the features on our website.</li>
+                                <li>You can adjust your cookie preferences by clicking Cookie Preferences link in the footer of the page.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Third party websites</strong>
+                            <p>In the website you may find links to and from partner sites, information sources and related party websites. Please take note that such third party website that you will visit by clicking on links have their own privacy policies and we take no responsibility regarding such privacy policies. We recommend familiarising with privacy policies of such websites before providing any personal data to such.</p>
+                        </li>
+                        <li><strong>Children personal data</strong>
+                            <ol>
+                                <li>Our website and services are targeted at persons over the age of 16 or another age under respective country’s law which allow you to assume responsibility for obligations emerging from contractual relations and have a full capacity to take legal actions.</li>
+                                <li>If we have reason to believe that we hold personal data of a person under that age in our databases without having consent from the parent rights holder, we will delete that personal data.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Updating your data</strong>
+                            <p>Please let us know if the personal information that we hold about you needs to be corrected or updated.</p>
+                        </li>
+                        <li><strong>Changes to the notice</strong>
+                            <p>Any changes to this notice will be published on the website and, in case of material changes, we may inform you about such via email.</p>
+                        </li>
+                    </ol></div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot">
+        <div class="container">
+            <div class="footer-main-content">
+                <div class="footer-main-1">
+                    <h3 class="footer-title">DigitalKeys</h3>
+                    <div class="footer-items">
+                        <a href="">ACERCA DE NOSOTROS</a><br>
+                        <a href="">POLÍTICA DE PRIVACIDAD</a><br>
+                        <a href="">TÉRMINOS Y CONDICIONES</a><br>
+                    </div>
+                </div>
+                <div class="footer-main-2">
+                    <h3 class="footer-title">MI CUENTA</h3>
+                    <div class="footer-items">
+                        <a href="">MI CUENTA</a><br>
+                        <a href="">MIS PEDIDOS</a><br>
+                        <br>
+                    </div>
+                </div>
+                <div class="footer-main-3">
+                    <h3 class="footer-title">AYUDA</h3>
+                    <div class="footer-items">
+                        <a href="">FAQ</a><br>
+                        <a href="">SOPORTE</a><br>
+                        <a href="">LOCALIZACIÓN</a><br>
+                    </div>
+                </div>
+            </div>
+            <div class="divisoria"><div class="linea-divisoria"></div></div>
+            <div id="redes">
+                <h4>Siguenos en</h4>
+                <a class="btn-red btn-social" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a class="btn-red btn-social" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a class="btn-red btn-social" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="divisoria"><div class="linea-divisoria"></div></div>
+            <div id="copyright" >Copyright &copy; 2021 DigitalKeys - All rights reserved</div>
+        </div>
+    </footer>
+</body>
+</html>

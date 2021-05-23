@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro -  DigitalKey</title>
+    <link rel="icon" href="img/logo4.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function validacion(){
+            var noValido = /\s/;
+
+            valor = document.getElementById("Nick").value;
+            if(valor.length == 0){
+                alert("Falta el nick");
+                return false;
+            }else if(noValido.test(valor)){ // se chequea el regex de que el string no tenga espacio
+                alert ("El nick no puede contener espacios en blanco");
+                return false;
+            }
+
+            valor = document.getElementById("FirstName").value;
+            if(valor.length == 0){
+                alert("Falta el nombre");
+                return false;
+            }else if(noValido.test(valor)){ // se chequea el regex de que el string no tenga espacio
+                alert ("El nombre no puede contener espacios en blanco");
+                return false;
+            }
+
+            valor = document.getElementById("LastName").value;
+            if(valor.length == 0){
+                alert("Faltan los apellidos");
+                return false;
+            }
+
+            valor = document.getElementById("InputEmail").value;
+            if(valor.length == 0){
+                alert("Falta el email");
+                return false;
+            }else if(noValido.test(valor)){ // se chequea el regex de que el string no tenga espacio
+                alert ("El email no puede contener espacios en blanco");
+                return false;
+            }
+
+            valor = document.getElementById("InputPassword").value;
+            if(valor.length == 0){
+                alert("Falta la contraseña");
+                return false;
+            }else if(noValido.test(valor)){ // se chequea el regex de que el string no tenga espacio
+                alert ("La contraseña no puede contener espacios en blanco");
+                return false;
+            }
+
+            valor = document.getElementById("RepeatPassword").value;
+            if(valor.length == 0){
+                alert("Falta repetir la contraseña");
+                return false;
+            }
+
+            valor = document.getElementById("Telefono").value;
+            if(valor.length == 0){
+                alert("Falta el teléfono");
+                return false;
+            }else if(noValido.test(valor)){ // se chequea el regex de que el string no tenga espacio
+                alert ("El teléfono no puede contener espacios en blanco");
+                return false;
+            }
+
+            valor = document.getElementById("Edad").value;
+            if(valor.length == 0){
+                alert("Falta la edad");
+                return false;
+            }else if(noValido.test(valor)){ // se chequea el regex de que el string no tenga espacio
+                alert ("La edad no puede contener espacios en blanco");
+                return false;
+            }
+
+            pass = document.getElementById("InputPassword").value;
+            repeatPass = document.getElementById("RepeatPassword").value;
+            if(pass != repeatPass){
+                alert("Las contraseñas no coinciden");
+                return false;
+            }else{
+                if(pass.length < 8){
+                    alert("La contraseña es demasidado corta");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="cuerpo espacidado">
+        <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Bienvenido a</h1>
+            <a class="navbar-brand" href="#page-top"><img class="img-logo" src="img/logo2.png" alt="Logo de Digital Keys" title="Logo"/></a>
+        </div>
+        <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Crear una Cuenta</h1>
+        </div>
+        <div class="registro espacidado">
+            <form name="formularioRegistro"class="user" method="post" action="checkregister.php" onsubmit="return validacion()">
+                <div class="form-group">
+                    <input type="text" class="form-control-2 form-control-user" id="Nick" name="Nick" placeholder="Nick o Alias">
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control-2 form-control-user" id="FirstName" name="FirstName" placeholder="Nombre">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control-2 form-control-user" id="LastName" name="LastName" placeholder="Apellidos">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control-2 form-control-user" id="InputEmail" name="InputEmail" placeholder="Correo Electronico">
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="password" class="form-control-2 form-control-user" id="InputPassword" name="InputPassword" placeholder="Contraseña">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="password" class="form-control-2 form-control-user" id="RepeatPassword" name="RepeatPassword" placeholder="Repite la Contraseña">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control-2 form-control-user" id="Telefono" name="Telefono" placeholder="Teléfono">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control-2 form-control-user" id="Edad" name="Edad" placeholder="Edad">
+                    </div>
+                </div>
+
+                <input type="submit" class="btn btn-primary-2 btn-user btn-block" id="enviar" name="enviar" value="Registrar Cuenta">
+
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" href="login.php">¿Ya dispone de una cuenta? ¡Inicia Sesión!</a>
+            </div>
+        </div>
+    </div>
+    <footer class="foot">
+        <div class="container">
+            <div class="footer-main-content">
+                <div class="footer-main-1">
+                    <h3 class="footer-title">DigitalKeys</h3>
+                    <div class="footer-items">
+                        <a href="">ACERCA DE NOSOTROS</a><br>
+                        <a href="">POLÍTICA DE PRIVACIDAD</a><br>
+                        <a href="">TÉRMINOS Y CONDICIONES</a><br>
+                    </div>
+                </div>
+                <div class="footer-main-2">
+                    <h3 class="footer-title">MI CUENTA</h3>
+                    <div class="footer-items">
+                        <a href="">MI CUENTA</a><br>
+                        <a href="">MIS PEDIDOS</a><br>
+                        <br>
+                    </div>
+                </div>
+                <div class="footer-main-3">
+                    <h3 class="footer-title">AYUDA</h3>
+                    <div class="footer-items">
+                        <a href="">FAQ</a><br>
+                        <a href="">SOPORTE</a><br>
+                        <a href="">LOCALIZACIÓN</a><br>
+                    </div>
+                </div>
+            </div>
+            <div class="divisoria"><div class="linea-divisoria"></div></div>
+            <div id="redes">
+                <h4>Siguenos en</h4>
+                <a class="btn-red btn-social" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a class="btn-red btn-social" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a class="btn-red btn-social" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="divisoria"><div class="linea-divisoria"></div></div>
+            <div id="copyright" >Copyright &copy; 2021 DigitalKeys - All rights reserved</div>
+        </div>
+    </footer>
+</body>
+</html>

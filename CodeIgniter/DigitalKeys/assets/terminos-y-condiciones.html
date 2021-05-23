@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio -  DigitalKey</title>
+    <link rel="icon" href="img/logo4.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="page-top">&nbsp; </div>
+<header class="barra-navegacion pt-2 fixed-top">
+    <nav class="navbar navbar-expand  topbar mb-2">
+        <div class="barra-principal">
+            <div class=" row mx-auto">
+
+                <a class="navbar-brand" href="#page-top"><img class="img-logo" src="img/logo2.png" alt="Logo de la empresa" title="Logo"/></a>
+
+                <form class="d-none d-md-inline-block form-inline mt-3 mw-100 navbar-search barra-busqueda" action="buscarInmueble.php" method="post">
+                    <div class="input-group" data-children-count="1">
+                        <input type="text" id="buscar" name="buscar" class="form-control borde-buscar bg-light border-0 small" placeholder="Buscar">
+                        <div class="input-group-append btn-lupa">
+                            <button class="btn" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="navbar-nav barra-botones">
+
+                    <li class="nav-item dropdown no-arrow d-md-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group" data-children-count="1">
+                                    <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn bg-light" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link" href="mostrarFavoritos.php" id="alertsDropdown" role="button">
+                            <i class="fas fa-fw fa-sign-in-alt"></i>
+                            Inciar Sesion
+                            <span class="badge badge-danger badge-counter"></span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link" href="register.php">
+                            <i class="fas fa-fw fa-address-card"></i>
+                            Registrarse
+                        </a>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="divisoria-2"><div class="linea-divisoria-2"></div></div>
+
+    <!--      <nav class="navbar navbar-expand-lg navbar-light bg-gris-oscuro fixed-top">
+                        <a class="navbar-brand" href="#"><a href="#page-top"><img class="img-logo" src="img/logo.png" alt="Logo de la empresa" title="Logo"/></a></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav> -->
+</header>
+<div class="categorias" >
+    <nav class="navbar navbar-expand-lg mb-1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars burger"></i>
+        </button>
+        <div class="barra-secundaria collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="container flex">
+                <div class="centrar-txt">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="componentes.html#page-top">
+                                PC
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!--<div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="componentes.html#cpu-y-moba">PC GAMES</a>
+                                <a class="dropdown-item" href="componentes.html#memorias">DLC's</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="perifericos.html#page-top">
+                                PLAYSTATION
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!--<div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="perifericos.html#ratones">PS GAMES</a>
+                                <a class="dropdown-item" href="perifericos.html#ratones">PSPLUS</a>
+                                <a class="dropdown-item" href="perifericos.html#teclados">PSNOW</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                XBOX
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="contacto.html#equipo">XBOX GAMES</a>
+                                <a class="dropdown-item" href="contacto.html#localizacion">XBOXLive</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                NINTENDO
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="contacto.html#equipo">GAMES</a>
+                                <a class="dropdown-item" href="contacto.html#equipo">SWITCH</a>
+                                <a class="dropdown-item" href="contacto.html#mensaje">ONLINE</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                Herramientas
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="contacto.html#equipo">Claves <br>Windows</a>
+                                <a class="dropdown-item" href="contacto.html#equipo">Licencias</a>
+                                <a class="dropdown-item" href="contacto.html#mensaje">Office</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                Promociones
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="divisoria-2"><div class="linea-divisoria-2"></div></div>
+</div>
+<div class="cuerpo">
+    <div class="container espacidado">
+        <div class="divisoria-2"><h3 class="titulo-h3">TÉRMINOS Y CONDICIONES</h3><div class="linea-divisoria-4"></div></div>
+
+        <div class="container espacidado">
+            <div class="temas-legales"style="vertical-align: inherit;">
+                Versión 2.1, última modificación 2021-01-21
+                <ol>
+                    <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Provisiones generales</font></font></strong>
+                        <ol>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estos Términos y condiciones, junto con la Política de privacidad y cualquier otra documentación del sitio web, tienen como objetivo proporcionar información sobre ENEBA, proporcionar a los usuarios y proveedores las reglas sobre el comportamiento aceptable en el sitio web y establecer pautas básicas para las personas que operan a través del sitio web.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El sitio web es un lugar en línea que proporciona a los entusiastas de los videojuegos un espacio seguro para conectarse y comprar diversos contenidos relacionados con los juegos, ofrecidos por los proveedores u otros usuarios que participan en el sitio web.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tenga en cuenta que el sitio web no es una tienda en línea, sino una plataforma en línea y todas las transacciones se llevan a cabo entre los usuarios, o entre los usuarios y los proveedores, mientras que ENEBA, a menos que se indique expresamente lo contrario, no se dedica a la venta o compra de contenido digital o productos físicos.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Para evitar dudas:
+                            </font></font><ol>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">las ventas realizadas a través del sitio web se realizan entre los respectivos usuarios, o entre usuarios y proveedores, mientras que ENEBA solo proporciona servicios secundarios relacionados con el establecimiento y mantenimiento del sitio web y la prestación de servicios adicionales relacionados con garantizar una experiencia fluida y segura para los usuarios y proveedores;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">estos Términos y Condiciones establecen las relaciones contractuales entre ENEBA y los Usuarios, y entre ENEBA y los Proveedores en relación con la administración del Sitio Web por parte de ENEBA;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">estos Términos y Condiciones no rigen las relaciones entre Usuarios o entre Usuarios y Proveedores;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">estos Términos y Condiciones no rigen los términos de uso para recibir y realizar pagos a través del sitio web. </font><font style="vertical-align: inherit;">Las instrucciones para realizar pagos a través del sitio web se pueden encontrar </font></font><a href="https://www.eneba.com/payment-instructions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">aquí</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;">Estas instrucciones son parte integral de los Términos y Condiciones. </font><font style="vertical-align: inherit;">Además, tenga en cuenta que ENEBA utiliza los servicios de pago de Hyperwallet para ayudar en las transacciones realizadas entre Usuarios o entre Usuarios y Proveedores. </font><font style="vertical-align: inherit;">Dichos servicios de pago están sujetos a los </font></font><a href="https://www.hyperwallet.com/agreements-terms" target="_blank" rel="noreferrer noopener nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio de </font></font></a><font style="vertical-align: inherit;"></font><a href="https://www.hyperwallet.com/agreements-privacy" target="_blank" rel="noreferrer noopener nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hyperwallet</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> y la </font><a href="https://www.hyperwallet.com/agreements-privacy" target="_blank" rel="noreferrer noopener nofollow"><font style="vertical-align: inherit;">Política de privacidad de Hyperwallet</font></a><font style="vertical-align: inherit;"> ;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En particular, estos Términos y Condiciones no establecen los términos de transacciones específicas que se celebran entre Usuarios, o Usuarios y Proveedores, tales como: precio de compra, contenido y calidad del Contenido Digital, disposiciones de seguridad, garantía y responsabilidad relacionadas con la venta de Contenido Digital. a través del sitio web. </font><font style="vertical-align: inherit;">ENEBA no verifica la veracidad y exactitud de los datos proporcionados por Usuarios y Proveedores.
+                                </font></font></li>
+                            </ol>
+                            </li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No obstante lo anterior, únicamente con el propósito de mantener la marca ENEBA, asegurar el buen funcionamiento del Sitio Web y evitar prácticas desleales y actividades ilegales en el Sitio Web, ENEBA se reserva el derecho de establecer pautas generales relacionadas con la venta y compra de contenido digital o productos físicos. a través del sitio web.
+                            </font></font></li>
+                            <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los términos para la venta y compra de productos físicos relacionados con los juegos a través del sitio web se proporcionan en un </font></font><a href="https://www.eneba.com/merchant-terms-and-conditions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Anexo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> separado </font><font style="vertical-align: inherit;">de estos Términos y Condiciones, que forma parte inseparable del mismo. </font><font style="vertical-align: inherit;">En caso de discrepancias entre los Términos y Condiciones y el Programa, prevalecerán las disposiciones del Programa con respecto a las transacciones de productos físicos.</font></font></strong>
+                            </li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tenga en cuenta que estos Términos y condiciones pueden cambiar de vez en cuando de acuerdo con el procedimiento proporcionado en la Sección 3.6 a continuación. </font><font style="vertical-align: inherit;">ENEBA recomienda encarecidamente a los Usuarios y Proveedores que lean los Términos y Condiciones de vez en cuando para familiarizarse completamente con los términos particulares vigentes en cada momento.
+                            </font></font></li>
+                        </ol>
+                    </li>
+                    <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Definiciones</font></font></strong>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cuenta</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : una cuenta que brinda la posibilidad al Usuario o al Proveedor de utilizar los Servicios provistos en el Sitio Web y obtener todos los beneficios de él.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contenido</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> digital: contenido digital que tiene el código de activación y solo se puede usar después de que se active en la plataforma informática del Usuario u otro contenido digital ofrecido para la compra por los Proveedores a través del sitio web.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">ENEBA</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class=""> - UAB Helis play, con domicilio social en Gyneju St. 4-333, Vilnius, República de Lituania.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Política de privacidad</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;: reglas que establecen los datos personales y los procesos de protección de la privacidad que aplica ENEBA.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contrato de venta</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;: cualquier contrato entre el Usuario y el Vendedor que obliga al Vendedor a transferir el acceso al Contenido digital al Usuario y el Usuario a pagar el precio del mismo.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Servicio</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;: uno de los servicios que proporciona ENEBA como se describe en estos Términos y Condiciones.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos y condiciones</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;: este conjunto de reglas que determina los derechos y obligaciones de los usuarios, proveedores y ENEBA y los términos que regulan el uso del sitio web.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuario</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : una persona física que actúa en relación con estos Términos y condiciones para fines distintos a su comercio, negocio, oficio o profesión (es decir, consumidor), y ha registrado una Cuenta en el Sitio web y (o) tiene la intención de comprar Contenido digital, o comprar o vender productos físicos mediante el uso de los Servicios proporcionados por ENEBA.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proveedor</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : un empresario que opera en cualquier forma que vende contenido digital a los usuarios a través del sitio web.
+                        </font></font></p>
+                        <p>
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sitio web</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;: un sitio web que está disponible en Internet con la dirección: </font></font><a href="http://www.eneba.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">www.eneba.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .
+                        </font></font></p>
+                    </li>
+                    <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aplicabilidad de estos términos y condiciones</font></font></strong>
+                        <ol>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios y proveedores acuerdan y aceptan estos Términos y condiciones, incluida la Política de privacidad, en su totalidad y sin reservas. </font><font style="vertical-align: inherit;">La aceptación de estos Términos y Condiciones es una condición necesaria para la prestación de los Servicios.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Para evitar dudas, estos Términos y Condiciones también son aplicables a cualquier usuario anónimo que ingrese al Sitio Web y, al ingresar, dichas personas aceptan estos Términos y Condiciones, la Política de Privacidad y cualquier otra documentación del Sitio Web.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Se solicita a los usuarios que tienen prohibido el uso del sitio web debido a las regulaciones de las restricciones estatales o regionales respectivas, incluido el país / región de residencia actual del usuario y el lugar de uso de los servicios, que se abstengan de usar el sitio web.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cada Usuario confirma que tiene al menos 16 (dieciséis) años o ha alcanzado la edad según las leyes del país respectivo, lo que le permite asumir la responsabilidad de las obligaciones que surgen de las relaciones contractuales y tiene plena capacidad para emprender acciones legales. </font><font style="vertical-align: inherit;">Además, cada Usuario confirma que no existen restricciones en virtud de las leyes de los respectivos países para utilizar los Servicios proporcionados por ENEBA.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cada Proveedor confirma que es un empresario y acepta estos Términos y Condiciones. </font><font style="vertical-align: inherit;">Cada Proveedor declara por la presente que no existen fundamentos fácticos o legales que les impidan aceptar estos Términos y Condiciones y celebrar Contratos de Venta con los Usuarios a través del Sitio Web destinados a la venta de Contenido Digital a los Usuarios.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ENEBA tiene derecho a realizar cambios y modificaciones a estos Términos y Condiciones, incluido el derecho a extraer nuevas disposiciones y retirar las antiguas, a su propia discreción, de forma unilateral y en cualquier momento mediante el anuncio de las modificaciones de los Términos y Condiciones en el Sitio Web. . </font><font style="vertical-align: inherit;">Al seguir utilizando el sitio web y los servicios, los usuarios y proveedores confirman que están sujetos a todos los cambios a estos términos y condiciones. </font><font style="vertical-align: inherit;">Las modificaciones de los Términos y condiciones entran en vigor 10 (diez) días después del anuncio en el sitio web, a menos que se indique explícitamente lo contrario.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios y proveedores pueden celebrar acuerdos adicionales por separado con ENEBA. </font><font style="vertical-align: inherit;">En caso de cualquier conflicto entre las disposiciones de estos Términos y Condiciones y dichos acuerdos adicionales, prevalecerán las disposiciones de los acuerdos adicionales a menos que se indique explícitamente lo contrario en dichos acuerdos adicionales.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ENEBA se comunica con los Usuarios y Proveedores mediante el envío de correos electrónicos, a través del sistema electrónico de la Cuenta del Sitio Web dejándoles avisos, o mediante la distribución de avisos a través de canales de comunicación dentro de otros servicios. </font><font style="vertical-align: inherit;">Los Usuarios y Proveedores consienten incondicionalmente en recibir comunicaciones electrónicamente y acuerdan que todos los acuerdos, avisos, divulgaciones y otras comunicaciones que ENEBA proporcione electrónicamente deberán cumplir con los requisitos legales de dicha comunicación por escrito.
+                            </font></font></li>
+                        </ol>
+                    </li>
+                    <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarifas de servicios</font></font></strong>
+                        <ol>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Salvo que se disponga expresamente lo contrario, ENEBA cobra su comisión y cualesquiera otras posibles tarifas de los precios determinados por el Vendedor en relación con cada transacción. </font><font style="vertical-align: inherit;">Durante el proceso de creación y subasta, un Proveedor recibe toda la información sobre comisiones y otras tarifas a las que está sujeto el Proveedor en relación con la inclusión de una subasta en particular en el Sitio web.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El uso del sitio web, la creación de una cuenta y la compra de contenido digital a través del sitio web es gratuito para los usuarios. </font><font style="vertical-align: inherit;">La comisión de ENEBA se cobra del precio de venta del Contenido digital especificado por el Proveedor. </font><font style="vertical-align: inherit;">No obstante, a los Usuarios se les podrá cobrar por servicios adicionales contratados con ENEBA a través del Sitio Web. </font><font style="vertical-align: inherit;">Al monto de las tarifas por dichos servicios adicionales, ENEBA podrá agregar el monto del Impuesto sobre el Valor Agregado (IVA) a la tasa aplicable en el lugar de residencia del Usuario en el territorio de la Unión Europea que se relacione con las obligaciones del IVA de conformidad con la Comunidad. Ley, en particular art. </font><font style="vertical-align: inherit;">58 de la Directiva 2006/112 / WE del Consejo y los Reglamentos de Ejecución n.o 282/2011 y 1042/2013.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios y proveedores son los únicos responsables de pagar las tarifas e impuestos relacionados con el uso de los servicios disponibles en el sitio web. </font><font style="vertical-align: inherit;">Los usuarios y proveedores son particularmente responsables de pagar los impuestos, tarifas u otros montos adeudados requeridos en relación con los contratos celebrados a través del sitio web por su cuenta. </font><font style="vertical-align: inherit;">En todo caso ENEBA no será responsable de liquidar tales tasas e impuestos. </font><font style="vertical-align: inherit;">Si un determinado método de pago falla o una factura está vencida, ENEBA se reserva el derecho de exigir el pago mediante otro método de pago, incluidos todos los posibles costos adicionales de dicho método.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Siempre que ENEBA proporcione Servicios a cualquier persona que se considere un empresario, dicha persona reconoce y acepta contabilizar cualquier Impuesto sobre bienes y servicios (GST), IVA, Impuesto sobre las ventas o cualquier impuesto similar a través del mecanismo de carga inversa aplicable.
+                            </font></font></li>
+                        </ol>
+                    </li>
+                    <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cuentas</font></font></strong>
+                        <ol>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Una persona que desee acceder a todos los servicios proporcionados en el sitio web debe registrarse y crear una cuenta. </font><font style="vertical-align: inherit;">Sin embargo, una cuenta no es necesaria para comprar contenido digital a través del sitio web. </font><font style="vertical-align: inherit;">El registro procede al completar toda la información necesaria en un formulario de registro que se puede encontrar en el sitio web. </font><font style="vertical-align: inherit;">Se le pedirá a la persona que envíe su nombre de usuario, dirección de correo electrónico, contraseña y otra información. </font><font style="vertical-align: inherit;">Para completar el registro, la persona deberá aceptar los Términos y condiciones y la Política de privacidad y cualquier otra documentación del sitio web, si corresponde. </font><font style="vertical-align: inherit;">No proporcionar cualquier información que, a la sola discreción de ENEBA, sea necesaria para verificar a dicho nuevo Usuario (independientemente de si dicha información se indica expresamente en estos Términos y Condiciones),
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cada Usuario está obligado a revelar su lugar de residencia. </font><font style="vertical-align: inherit;">Se informa a los usuarios que ENEBA podrá utilizar herramientas para detectar la localización del dispositivo de red informática (y la conexión) en cuanto al país de origen desde el que se realiza el registro. </font><font style="vertical-align: inherit;">ENEBA puede negarse a configurar la Cuenta o suspender o rescindirla en caso de que el lugar de residencia indicado por el Usuario difiera de los resultados de la verificación realizada por ENEBA, en particular por la localización de los dispositivos de la red informática (y la conexión), en lo que respecta el país de origen desde el que se accede al sitio web. </font><font style="vertical-align: inherit;">Cada Usuario tiene derecho a configurar una sola cuenta, a menos que se acuerde expresamente lo contrario, caso por caso. </font><font style="vertical-align: inherit;">Para evitar dudas, los usuarios no deben utilizar la conexión VPN durante el uso del sitio web, a menos que se acuerde expresamente lo contrario en cada caso.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">De acuerdo con sus procedimientos internos, ENEBA puede, de vez en cuando, llevar a cabo procedimientos KYC y solicitar a sus Usuarios y Proveedores la presentación de documentos e información adecuados relacionados con su identidad y actividades dentro del Sitio Web. </font><font style="vertical-align: inherit;">Entre ellos se pueden incluir los documentos de identificación del Usuario, así como la documentación del Vendedor, que confirme el estado legal del Vendedor, la dirección registrada, la autorización para representar al Vendedor, el número de identificación de IVA y otros datos que puedan ser necesarios en un caso determinado. </font><font style="vertical-align: inherit;">El no proporcionar dichos documentos e información dentro del plazo establecido por ENEBA puede constituir la razón para rechazar el registro y (o) ser motivo para suspender o cancelar una Cuenta ya registrada.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tras el registro correcto en el sitio web por parte del usuario, se le proporciona un acceso a la funcionalidad completa del sitio web después de ingresar su nombre de usuario y contraseña.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El registro en el sitio web por parte del usuario es equivalente a que dicha persona haya leído, entendido y aceptado estos Términos y Condiciones en su totalidad, incluida la Política de Privacidad y cualquier otra documentación del sitio web, y haya dado su consentimiento para el procesamiento por parte de ENEBA ahora y en el futuro, de datos personales transferidos a ENEBA durante el proceso de registro del Sitio Web. </font><font style="vertical-align: inherit;">Independientemente de lo anterior, también se considera que una persona que no se ha registrado en el Sitio Web y no ha obtenido una Cuenta, ha aceptado estos Términos y Condiciones, la Política de Privacidad y cualquier otra documentación del Sitio Web, desde el momento en que opta por utilizar cualquiera de los las funcionalidades del sitio web.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En cualquier momento, si ENEBA cree que la Cuenta tiene un alto riesgo de dañar a cualquier persona, ENEBA tiene todos los derechos para suspender el uso de la Cuenta restringiendo el acceso al inicio de sesión en la Cuenta, reteniendo transacciones, etc. Una vez eliminado el riesgo (a criterio exclusivo de ENEBA), ENEBA reactivará la Cuenta. </font><font style="vertical-align: inherit;">En caso de que el administrador de una Cuenta viole la ley o estos Términos y Condiciones, ENEBA tiene derecho a cancelar la Cuenta. </font><font style="vertical-align: inherit;">ENEBA tendrá derecho a suspender o dar por terminado el uso de la Cuenta siempre que a juicio de ENEBA ocurra cualquier otra circunstancia que pueda resultar en riesgo para cualquier persona o incumplimiento de las leyes.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios son responsables del cuidado razonable de su Cuenta y deben asegurarse de que su dirección de correo electrónico esté actualizada. </font><font style="vertical-align: inherit;">ENEBA no se hace responsable de situaciones en las que los Usuarios no reciban información debido a su negligencia.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En el caso de que ENEBA decida que el sitio web debe ser modernizado o tiene problemas técnicos, ENEBA tiene el derecho de restringir la posibilidad de iniciar sesión en las cuentas o utilizar los servicios respectivos o incluso el acceso general al sitio web.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios reconocen que regalar los datos de inicio de sesión de su Cuenta a otra persona podría causar daños a ENEBA oa terceros. </font><font style="vertical-align: inherit;">Los usuarios son responsables de asegurar ese tipo de información y, en el caso de que no se aseguren de ello, los usuarios son responsables de eliminar todos los daños causados.&nbsp;
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La Cuenta se pone a disposición del Usuario por ENEBA de forma gratuita y le permite utilizar los Servicios ofrecidos a través del Sitio Web, lo que es posible desde cualquier lugar del mundo a través de la red de Internet.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los servicios (o cualquier otra funcionalidad incorporada en el sitio web) pueden diferir entre diferentes países o regiones. </font><font style="vertical-align: inherit;">ENEBA no ofrece garantía alguna en el sentido de que un servicio o funcionalidad de cierto tipo o alcance estará disponible para todos los Usuarios. </font><font style="vertical-align: inherit;">ENEBA se reserva el derecho de restringir, rechazar o crear otro nivel de acceso relacionado con el uso de los Servicios (o cualquier otra funcionalidad incorporada en el Sitio Web) para diferentes Usuarios individuales.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">También se crean cuentas para proveedores. </font><font style="vertical-align: inherit;">Para comenzar a vender a través del Sitio Web, el Vendedor debe comunicarse con ENEBA completando el formulario de registro y proporcionando los documentos e información solicitados. </font><font style="vertical-align: inherit;">Después del registro exitoso, ENEBA creará una Cuenta y proporcionará al Vendedor los datos de inicio de sesión, que posteriormente podrán ser modificados por el Vendedor.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En caso de cualquier violación de estos Términos y Condiciones y las leyes aplicables por parte del Proveedor, ENEBA se reserva el derecho de suspender o cancelar la Cuenta del Proveedor. </font><font style="vertical-align: inherit;">Las secciones 5.6-5.9 también se aplican a los proveedores.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No obstante lo anterior, la Cuenta del Proveedor también puede suspenderse o cancelarse si se advierte que el Contenido Digital puesto a la venta viola los derechos de propiedad intelectual de terceros o ya ha sido utilizado.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios y proveedores no utilizarán otras cuentas y no pondrán sus cuentas a disposición de otros usuarios o terceros. </font><font style="vertical-align: inherit;">Lo anterior no se aplicará a que los Proveedores pongan su Cuenta a disposición de las personas debidamente autorizadas para actuar en su nombre, así como de sus empleados, autorizados por el Proveedor para usar la Cuenta. </font><font style="vertical-align: inherit;">En la medida en que lo permita la ley, ENEBA estará exenta de cualquier responsabilidad contra los Usuarios y Proveedores relacionada con la violación de esta disposición. </font><font style="vertical-align: inherit;">Para evitar dudas, los Usuarios y Proveedores asumirán toda la responsabilidad por las acciones y los resultados de las acciones de las personas a las que proporcionaron acceso a su Cuenta.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tanto los Usuarios como los Vendedores están obligados a mantener actualizados sus datos de registro e informar rápidamente a ENEBA sobre cualquier cambio de dichos datos.
+                            </font></font></li>
+                        </ol>
+                    </li>
+                    <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos y condiciones de uso</font></font></strong>
+                        <ol>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">De acuerdo con estos Términos y Condiciones, ENEBA otorga a los Usuarios una licencia limitada, no exclusiva, intransferible y no sublicenciable para acceder y hacer uso personal y no comercial de los Servicios prestados por ENEBA. </font><font style="vertical-align: inherit;">Dicha licencia se limita estrictamente a las funcionalidades del sitio web y no se extiende a ninguna licencia de contenido digital (incluidos los códigos de activación de juegos ofrecidos por los proveedores a través del sitio web). </font><font style="vertical-align: inherit;">Para evitar dudas, las licencias de contenido digital solo se pueden otorgar a discreción de sus propietarios u otras personas autorizadas.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios están obligados a no abusar de los Servicios de ENEBA y solo a usarlos según lo establecido por la ley y estos Términos y Condiciones. </font><font style="vertical-align: inherit;">El uso inadecuado de los Servicios podría causar efectos negativos a ENEBA o terceros y si los Usuarios violan los términos de uso de los Servicios, son responsables de eliminar todos los daños causados.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Todos los derechos no otorgados expresamente a los Usuarios en estos Términos y Condiciones están reservados y retenidos por ENEBA o sus propietarios, licenciantes, proveedores, editores u otras personas autorizadas.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cualquier objeto de propiedad intelectual como textos, materiales gráficos, funciones interactivas, logotipos, fotografías, archivos, software en el Sitio Web, excepto los cargados, transmitidos, puestos a disposición, publicados por Usuarios y Proveedores, así como la selección, organización, la coordinación, la recopilación de los materiales y el esquema general y la naturaleza del Sitio Web constituyen propiedad intelectual de ENEBA. </font><font style="vertical-align: inherit;">Están protegidos por derechos de autor, marcas registradas, patentes, derechos de diseño industrial y cualquier otro derecho y disposición, incluidos los convenios internacionales y los derechos de propiedad. </font><font style="vertical-align: inherit;">Cualquiera de estos derechos está reservado para ENEBA. </font><font style="vertical-align: inherit;">Todas las marcas comerciales, marcas y nombres comerciales constituyen propiedad de ENEBA.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A menos que cuente con el consentimiento expreso por escrito de ENEBA, ni los Usuarios ni los Vendedores están autorizados a: duplicar, copiar, descargar, difundir, vender, distribuir o revender cualquier servicio, información, textos, gráficos, videoclips, sonidos, guiones, archivos, bases de datos o listas de cualquier tipo. disponibles en oa través del sitio web ni utilizarlos de otra manera. </font><font style="vertical-align: inherit;">Está prohibido recuperar el contenido del Sitio Web de forma sistemática para crear o compilar, ya sea directa o indirectamente, una colección, compilación, base de datos y catálogo (mediante el uso de robots, buscadores, dispositivos automáticos o manuales) sin el permiso expreso por escrito de ENEBA. </font><font style="vertical-align: inherit;">Se prohíbe el uso de cualquier contenido o material disponible en el sitio web para fines no especificados en los Términos y condiciones, especialmente cualquier uso, publicación, copia en cualquier forma, ya sea electrónica, mecánica, fotográfica u otra (Todos los derechos reservados).
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios están obligados a leer y aceptar los Términos y Condiciones y la Política de Privacidad, así como cualquier otra documentación del Sitio Web, con el fin de garantizar la protección de sus datos personales cargados a través del Sitio Web. </font><font style="vertical-align: inherit;">Al usar el Sitio, cada Usuario consiente en cumplir con los Términos y Condiciones relacionados con la protección de la privacidad y la protección de datos personales definidos en la Política de Privacidad.&nbsp;
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ENEBA puede proporcionar a los Usuarios hipervínculos en el sitio web (es decir, banners, canales) con acceso al contenido, productos o servicios ofrecidos por otros proveedores que los conducen a los sitios web de dichos proveedores. </font><font style="vertical-align: inherit;">ENEBA no se hace responsable de la certeza, exactitud o confiabilidad de la información enviada por los proveedores mencionados. </font><font style="vertical-align: inherit;">ENEBA recomienda leer todos los documentos en los sitios de dichos proveedores. </font><font style="vertical-align: inherit;">Los usuarios reconocen que ENEBA no tiene control sobre las acciones de estos proveedores.
+                            </font></font></li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Los usuarios y proveedores, incluidos, entre otros, confirman y declaran que:
+                            </font></font><ol>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no publicará información indebida o defectuosa que pueda ser perjudicial para ENEBA, otros Usuarios, Vendedores o terceras personas;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no cargará ni difundirá información en el sitio web que pueda violar leyes, acuerdos contractuales o derechos de terceros. </font><font style="vertical-align: inherit;">Dicha información potencialmente sensible podría ser material protegido por derechos de autor, datos personales, secretos comerciales y otros;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no se hará pasar por otra persona o entidad, ya sea existente o ficticia, ni mantendrá falsamente relacionado con ninguna otra persona o entidad, ni accederá a las Cuentas de otros Usuarios o Proveedores, ni proporcionará información falsa que pueda inducir a error a ENEBA, a otros Usuarios o Proveedores;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no intentará piratear, modificar, deshabilitar o afectar de ninguna otra manera el sitio web ni desafiar su seguridad;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no utilizará el sitio web para ningún otro fin que no sea el que se pretende utilizar teniendo en cuenta los fines de los servicios de ENEBA;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no intentará recopilar ningún dato personal que se mantenga en el sistema del sitio web sin el consentimiento de un sujeto de datos en particular y no ofenderá ni engañará a otros usuarios o proveedores;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no utilizará el sitio web para ningún propósito ilegal o para violar cualquier ley, incluidas las disposiciones relacionadas con los derechos de autor, los derechos de propiedad intelectual y otros derechos de propiedad;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no intentará interferir con la actividad del sitio web ni prohibirá a otros usuarios o proveedores usar el sitio web (o dificultar su uso);
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no transferirá a cambio de remuneración ni de ninguna otra manera pondrá a disposición de remuneración parte o la totalidad de su Cuenta;
+                                </font></font></li>
+                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">no realizará transacciones con dinero de fuentes ilegales o no divulgadas.
+                                </font></font><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Todas las acciones mencionadas anteriormente incluyen intentos de realizar una de ellas o crear circunstancias para que tales acciones se materialicen.
+                                </font></font></p>
+                                    <ol>
+
+                                    </ol>
+                                </li>
+                            </ol>
+                            </li>
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al publicar o publicar sus propios materiales en el sitio web o mediante cualquier otra distribución de los mismos a ENEBA, los Usuarios y Proveedores dentro del alcance permitido por las leyes otorgan una licencia irrevocable, permanente y gratuita para que ENEBA utilice estos materiales, incluyendo, pero sin limitarse a, presentar, transmitir, distribuir, reproducir, publicar, duplicar, adaptar, modificar, traducir, crear contenido relacionado y de otro modo, de cualquier forma y para cualquier fin que pueda ser beneficioso para el funcionamiento de ENEBA, actualmente o en el futuro. </font><font style="vertical-align: inherit;">Los usuarios y proveedores reconocen y garantizan a ENEBA que tienen los medios y los derechos suficientes para garantizar dicha licencia.&nbsp;
+                            </font></font></li>
+                            <li>VENDORS ARE STRICTLY PROHIBITED FROM LISTING AND SELLING ANY DIGITAL CONTENT WHICH INFRINGE THE
+                                APPLICABLE LAWS, THIRD PARTY RIGHTS (INCLUDING COPYRIGHT) OR THESE TERMS AND CONDITIONS.
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Dealings between Users and Vendors and the role of ENEBA</strong>
+                        <ol>
+                            <li>ENEBA being an administrator of the Website, provides Vendors meeting certain requirements with an
+                                opportunity to sell Digital Content to the Users via the Website.
+                            </li>
+                            <li>Each Vendor determines the price of the Digital Content which they intend to sell via the Website.
+                                Unless expressly provided otherwise and subject to Sections 4.1-4.2 ENEBA collects its commission and
+                                any other possible fees from the amount of such price. Users and Vendors confirm their understanding
+                                that ENEBA and individual Vendors may also agree in additional agreements indicated in Section 3.7 on
+                                other commissions and fees.
+                            </li>
+                            <li>By listing Digital Content on the Website, Vendor instructs ENEBA to publish on the Website Vendor’s
+                                invitation to conclude an agreement for Users willing to purchase Digital Content at a price determined
+                                by the Vendor. As such it shall not constitute a sales offer within the meaning of the civil law. Vendor
+                                shall be entitled to change the price of the offered Digital Content, provided that no Users have
+                                expressed the will to purchase such. Each Vendor acknowledges and consents that the product prices and
+                                descriptions are made public and are available for all Users of the Website.
+                            </li>
+                            <li>For the purposes of listing Digital Content on the Website, Vendors provide information on the products
+                                to be put on sale on the Website and consent to ENEBA reviewing and finalizing the descriptions in order
+                                to ensure the general standard of the listing descriptions on the Website. Each Vendor undertakes to
+                                provide true and complete information necessary to complete such descriptions. Provided information must
+                                properly reflect the real features of the product. ENEBA shall not be responsible for any inaccuracies
+                                of the product descriptions arising due to Vendors providing ENEBA with incorrect information. Vendors
+                                hereby authorize ENEBA to use information indicated in this Section free of charge, to prepare
+                                descriptions of products being sold, including modifications, alterations and translations of this
+                                information.
+                            </li>
+                            <li>Each User is aware and hereby acknowledges that by expressing their will to purchase Digital Content
+                                (i.e., placing an order connected with the purchase of Digital Content) from the Vendor via the Website
+                                may entail an obligation to pay, provided that a will to conclude a contract and to charge the User is
+                                expressed by the Vendor. For avoidance of doubt, Users expressing their will to purchase the Digital
+                                Content must be aware that the Vendor may be entitled to withdraw from entering into a Sales Contract
+                                according to the delivery and payment authorization preferences chosen by the Vendor.
+                            </li>
+                            <li>ENEBA does not authorize delivery of Digital Content sold by Vendors and is not responsible for and does
+                                not authorize payments for Digital Content delivered via the Website by Vendors.
+                            </li>
+                            <li>ENEBA enables Users and Vendors to have due payments of the Users paid by means of specific payment
+                                channels available on the Website. For avoidance of doubt, Vendors may allow such payments to be made
+                                outside the ENEBA ecosystem in which case the Users shall be responsible for ensuring that the payment
+                                has been duly and securely made, documented and all information has been communicated with the Vendor.
+                                With regards to the payments made within the ENEBA ecosystem, hereby each Vendor consents and grants
+                                permission to ENEBA to deduct its commissions and other fees from the funds collected on its banks
+                                account and transfer the remaining part to the Vendor’s bank account.
+                            </li>
+                            <li>ENEBA encourages amicable resolution of any disputes between Users and Vendors. For this purpose, ENEBA
+                                provides Users and Vendors with a dispute resolution mechanism – via help centre functionality available
+                                on the Website. Therein Users and Vendors may agree to have the funds returned to the User or have the
+                                purchased faulty product exchanged. To maintain ENEBA brand, avoid unfair practices and illegal
+                                activities on the Website, ENEBA may participate in the said process as an intermediary, however the
+                                right to resolve such disputes shall remain with the Vendors. In case the User is not satisfied with the
+                                conclusion of such resolution, they may raise the respective claims against the Vendor at court or in
+                                any other way.
+                            </li>
+                            <li>Users and Vendors acknowledge that entering in any contracts on the Website involves the risk of dealing
+                                with abusive people. ENEBA acts carefully and uses reasonable measures in order to verify the
+                                truthfulness of the information and data provided by Users and Vendors for the purpose of identifying
+                                respective Users and Vendors and determining their suitability to use this Website and dispose Accounts.
+                                Nevertheless, Users and Vendors should also use reasonable endeavours to make sure that the respective
+                                User or Vendor is suitable for any business transactions and relationships.
+                            </li>
+                            <li>Users and Vendors are personally responsible for observing all the terms and conditions of transactions
+                                conducted on, via or as a result of using the Website or Services, in particular the Terms and
+                                Conditions and other commitments. This also includes, but is not limited to, payment terms, warranty,
+                                returns, delivery, time of delivery, insurance, fees, taxes, licences, or penalties.
+                            </li>
+                            <li>In order to unify rules of transactions performed via the Website and to ensure standard of fair
+                                practice when conducting the above Users and Vendors hereby confirm that the Sales Contract between the
+                                User and the Vendor becomes valid once the provision of the access to the Digital Content and the charge
+                                to the User are authorized by the Vendor. All further actions connected with the Sales Contract, rights
+                                and obligations, are regulated by adequate laws or agreements between Users and Vendors.
+                            </li>
+                            <li>ENEBA will cooperate with Users and Vendors with regards to all of the questions related to appropriate
+                                provision of Services. Communication between ENEBA, and Users and Vendors will proceed through the
+                                Website’s help centre, e-mail or other communication channels agreed separately.
+                            </li>
+                            <li>ENEBA will provide Users and Vendors with technical support provided they encounter any problems in
+                                relation to the functionality of the Account or the Website.
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Obligations of Vendors</strong>
+                        <ol>
+                            <li>By accepting these Terms and Conditions, and by placing any Digital Content for sale on the Website,
+                                each Vendor warrants and acknowledges that:
+                                <ol>
+                                    <li>it has a full capacity and right to accept the Terms and Conditions any related documentation,
+                                        to grant licences and authorizations and assume obligations described herein;
+                                    </li>
+                                    <li>such Digital Content is legally obtained and originates from legal sources, is free from any
+                                        defects and any third-party rights and claims, and the Vendor possesses all the necessary
+                                        licenses, rights, permits and consents to their use, distribution, posting, publication, sale,
+                                        including the right to sale through the Internet, online system, as well as that the rights are
+                                        not limited in any way;
+                                    </li>
+                                    <li>such Digital Content does not violate any third-party rights, including copyrights, trademarks,
+                                        patent rights, trade secrets, privacy rights, image rights, nor any other ownership rights or
+                                        intellectual property rights;
+                                    </li>
+                                    <li>it commits to use the Website and Services in line with these Terms and Conditions, applicable
+                                        laws and good practices;
+                                    </li>
+                                    <li>it will not engage in any activities that could be detrimental to ENEBA brand or which may have
+                                        negative effect on the Website, or the Digital Content sold via the Website;
+                                    </li>
+                                    <li>it will not use the Website for any money laundering related activities nor for any actions that
+                                        may in the view of ENEBA raise the risk of being accused of using the Website for money
+                                        laundering purposes;
+                                    </li>
+                                    <li>it will not use the Website to resell Digital Content acquired free of charge or with a discount
+                                        related to a charity event or supporting such an event;
+                                    </li>
+                                    <li>will not use VPN connection during the use of Website, unless expressly agreed otherwise on a
+                                        case-by-case basis;
+                                    </li>
+                                    <li>will not list and will not sell on the Website Digital Content which contain or may be used to
+                                        receive, directly or indirectly, illegal contents and services.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Each Vendor agree and acknowledge that it:
+                                <ol>
+                                    <li>is the seller and supplier of the Digital Content and this will be clearly defined in their
+                                        contractual arrangements with the Users, as well as the relevant invoices, bills or sales
+                                        receipts;
+                                    </li>
+                                    <li>will set general terms and conditions of the sales made to the Users;
+                                    </li>
+                                    <li>will authorize the relevant charge to the Users and the delivery of Digital Content;
+                                    </li>
+                                    <li>is solely responsible for paying VAT, GST, Sales Tax or any similar tax liabilities in
+                                        compliance with the applicable laws resulting from the sale of Digital Content to Users via the
+                                        Website (if any).
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>In case the Vendor is a business representative of the legal entity, it warrants, represents and
+                                certifies that as such a representative they possess the necessary consents and authorizations from
+                                their principal to act as a sales representative and publish the contact details necessary for
+                                conducting business.
+                            </li>
+                            <li>Vendors are obliged to provide information or documents related to their business, company or Digital
+                                Content at first request of ENEBA. Each Vendor represents, warrants, acknowledges and takes full
+                                responsibility that:
+                                <ol>
+                                    <li>the information and documents submitted during the registration process or further use of the
+                                        Website are true, accurate, valid and complete;
+                                    </li>
+                                    <li>it will immediately report all changes to the documents accordingly in order to keep them true,
+                                        valid and complete.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Each Vendor agrees to provide all necessary information, materials and permissions and all reasonable
+                                support and cooperation to ENEBA, for the latter to provide its Services depending on whether or not the
+                                Vendor has violated the Terms and Conditions and/or a complaint against the Vendor has been filed. If
+                                failure to do so is caused by any delay, suspension or denial of access to any Service, ENEBA will not
+                                be obliged to extend the term of such a service or held liable for any loss or damage caused by such a
+                                delay, suspension or denial.
+                            </li>
+                            <li>Each Vendor agrees and acknowledges that they are obliged to act in conformity with all the laws and
+                                regulations applicable to themselves, the transaction and the respective User.
+                            </li>
+                            <li>Unless expressly provided otherwise by ENEBA, Vendors acknowledge and agree that they will only use
+                                Website to sell products in a digital form, meaning that products will be available for download by
+                                Users to their hard drives and will not be delivered or stored on material media carriers.
+                            </li>
+                            <li>With regards to post-sale communication, each Vendor undertakes to:
+                                <ol>
+                                    <li>use functionality indicated in Section 7.8 to resolve all post-sale issues;
+                                    </li>
+                                    <li>not engage in unfair practice and resolve arising issues in good faith, i.e., to actively try to
+                                        resolve Users’ issues and avoid delay in response beyond what is reasonably necessary to
+                                        investigate and resolve such issues;
+                                    </li>
+                                    <li>not to post, promote or transmit any unlawful, harassing, libellous, harmful, vulgar, obscene or
+                                        otherwise objectionable material of any kind or nature;
+                                    </li>
+                                    <li>not mislead the Users or post false information;
+                                    </li>
+                                    <li>not refer to ENEBA as the party responsible for resolving post-sales issues, other than in the
+                                        case of malfunction of the Services provided by the Website.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>ENEBA reserves the right to take actions against any Vendor that would be found in breach of terms set
+                                forth in Section 8.8 above, up to, and including restricting Services provided via the Website. For the
+                                avoidance of doubt, ENEBA acts only as an intermediary and is not responsible for the contents of the
+                                conversations between Users and Vendors.
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Liability</strong>
+                        <ol>
+                            <li>ENEBA’s liability is excluded in relation to:
+                                <ol>
+                                    <li>Users or Vendors acting beyond ENEBA control and resulting in dealing damage (i.e., violated
+                                        Terms and Conditions, Privacy Policy, applicable laws, provided access to the Account to another
+                                        person or performed other actions);
+                                    </li>
+                                    <li>any adverse consequences resulting from access, use of or inability to use the Website due to
+                                        reasons beyond ENEBA control;
+                                    </li>
+                                    <li>any actions taken by ENEBA in relation to Users or Vendors related to infringement of these
+                                        Terms and Conditions or applicable laws. Such include suspending or terminating Accounts or
+                                        limiting functionality of the Website;
+                                    </li>
+                                    <li>implications of any access to data and information being reached by third persons in an
+                                        unauthorised way which was not possible to track in time, unless ENEBA did not take reasonable
+                                        actions as soon as possible to prevent the consequences, also where any adverse consequences to
+                                        private data occur subject to actions and omissions of Users and Vendors;
+                                    </li>
+                                    <li>any adverse consequences due to viruses, trojan horses etc. which may be transferred to the
+                                        Website or through the Website by third parties, except that ENEBA shall ensure that all the
+                                        reasonably available measures are taken to remove such threats;
+                                    </li>
+                                    <li>laws or any third-party rights infringed by Users and Vendors, in particular in relation to any
+                                        damages caused to third parties by Users and Vendors as a result of violating copyrights,
+                                        industrial property rights, etc., in particular for any demands in relation to the transmission,
+                                        distribution, publication, offering, presentation of data to which the third persons have the
+                                        claims or rights to the Digital Content or physical products;
+                                    </li>
+                                    <li>transaction of purchase being not completed because of the technical problems in one of the
+                                        proposed payment methods on the Website;
+                                    </li>
+                                    <li>purchased Digital Content or physical products not working in a way that it should be;
+                                    </li>
+                                    <li>Users or Vendors submitting false or untrue statements, information, assurances and data subject
+                                        to the Terms and Conditions, Privacy Policy and any other Website’s documentation;
+                                    </li>
+                                    <li>any form of damage caused by Users or Vendors because of their non-performance or improper
+                                        performance of Terms and Conditions, Privacy Policy or other documents of the Website, as well
+                                        as any rights and obligations towards each other.
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>ENEBA cannot reasonably ensure that Users and Vendors have the full capacity to perform any Sale
+                                Contracts concluded on the Website. Users and Vendors are solely responsible for the performance of
+                                their Sale Contracts.
+                            </li>
+                            <li>ENEBA declines all guarantees that consist of condition, suitability, quality or functioning warranties
+                                related to the services available on the Website, as well as Digital Content sold by Vendors. ENEBA is
+                                only liable for proper availability of using Services. Vendors shall be solely responsible for the
+                                Digital Content sold via the Website. ENEBA shall not bear any liability against any third parties
+                                related in particular to non-performance or improper performance by Vendors of their Sale Contracts
+                                entered into with Users, or to any delict committed by Vendors, any infringement by Vendors of the law
+                                in force or related to any false information, assurances or statements submitted by Vendors. If any
+                                claims, complaints, petitions, pretensions, etc. be directed by third parties to ENEBA, related to any
+                                Vendor’s behaviour indicated in this Section above, such Vendor shall be obliged to take full
+                                responsibility against these entities and the Vendor shall bear all and any costs related thereto and
+                                borne by ENEBA. Moreover, where third parties would file any claims against ENEBA related to any
+                                violations on part of any Vendor, in particular violation of copyrights, such Vendor shall replace ENEBA
+                                in such proceedings or shall act as a third-party respondent. This Section 9.3. shall accordingly apply
+                                to the selling Users to the extent which does not infringe consumer rights.
+                            </li>
+                            <li>To the fullest extent permitted by law, all services provided by ENEBA on or via the Website are made
+                                available on an AS IS, IF AVAILABLE, and WITH ALL DEFECTS basis, and ENEBA hereby expressly declines all
+                                warranties, including but not limited to any warranty of condition, quality, durability, functioning,
+                                reliability, merchantability or suitability for any specific purpose of the Digital Content sold by
+                                Vendors, unless consumers rights protection laws provide otherwise.
+                            </li>
+                            <li>The total liability of ENEBA against Vendors is limited to the amount of EUR 300. The foregoing sentence
+                                does not waive the need to prove and document the respective damage alleged to be sustained by the
+                                Vendor. Vendors must prove suffered damage in order to acquire the right to require the amount of damage
+                                from ENEBA. Any claims to ENEBA must be raised within 20 (twenty) days after the date on which a problem
+                                occurs. In countries where limitation of liability against consumers is possible, the terms of the first
+                                and second sentence of this Section shall apply accordingly.
+                            </li>
+                            <li>Each Vendor and selling User shall fully indemnify, hold harmless and defend (for the purposes of this
+                                Section 9, indemnify and indemnification) ENEBA and its directors, officers, employees, agents,
+                                stockholders and affiliates (for the purposes of this Section 9, Indemnified Parties) from and against
+                                all claims, demands, actions, suits, damages, liabilities, losses, settlements, judgments, costs and
+                                expenses (including but not limited to reasonable attorney’s fees and costs), which arise out of or
+                                relate to (i)&nbsp;any breach of any representation or warranty of the Vendor or the selling User
+                                contained in these Terms and Conditions, (ii) any breach or violation of any covenant or other
+                                obligation or duty of the Vendor or the selling User under these Terms and Conditions or under
+                                applicable law, (iii) any alleged breach or violation by the Vendor or the selling User of third party
+                                rights, including intellectual property rights, (v) any claim related to the auction or transaction
+                                listed by the Vendor or the selling User, or listed by ENEBA on behalf of the Vendor or the selling User
+                                in each case whether or not caused by the negligence of ENEBA or any other Indemnified Party and whether
+                                or not the relevant claim has merit.
+                            </li>
+                            <li>Each Vendor and selling User shall inform ENEBA in writing of any claim, demand or suit and shall fully
+                                cooperate in the defence thereof. No Vendor or selling User will agree to the settlement of any such
+                                claim, demand or suit prior to the final judgment thereon without the consent of ENEBA whose consent may
+                                be withheld at ENEBA sole and entire discretion.
+                            </li>
+                            <li>Unless the applicable law provides otherwise, ENEBA is entitled to make, at its absolute discretion, any
+                                set-off from funds accumulated by any Vendor or selling User.
+                            </li>
+                            <li>Each Vendor and selling User acknowledges and agrees that during the validity of these Terms and
+                                Conditions and after their termination or expiration for any reason whatsoever, Vendor and selling User
+                                shall continue to bear liability for all indemnification obligations pursuant to these Terms and
+                                Conditions and all other amounts due or which may become due under these Terms and Conditions. This
+                                liability is not subject to any limitation of liability that may be expressed elsewhere in these Terms
+                                and Conditions.
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Events Outside ENEBA Control</strong>
+                        <ol>
+                            <li>ENEBA will not be liable or responsible for any failure to perform, or delay in performance of, any of
+                                ENEBA obligations under these Terms and Conditions that is caused by an Event Outside ENEBA Control. An
+                                Event Outside ENEBA Control is defined below in Section 10.2.
+                            </li>
+                            <li>An Event Outside ENEBA Control means any act or event beyond ENEBA reasonable control, including without
+                                limitation strikes, lock-outs or other industrial action by third parties, civil commotion, riot,
+                                invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat or
+                                preparation for war, fire, explosion, storm, flood, earthquake, subsidence, epidemic or other natural
+                                disaster, or failure of public or private telecommunications networks or impossibility of the use of
+                                railways, shipping, aircraft, motor transport or other means of public or private transport.
+                            </li>
+                            <li>If an Event Outside ENEBA Control takes place that affects the performance of ENEBA obligations under
+                                these Terms and Conditions:
+                                <ol>
+                                    <li>ENEBA will contact the affected Users and Vendors as soon as reasonably possible to notify such;
+                                        and
+                                    </li>
+                                    <li>ENEBA obligations under these Terms and Conditions will be suspended and the time for
+                                        performance of ENEBA obligations will be extended for the duration of the Event Outside ENEBA
+                                        Control.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Complaints</strong>
+                        <ol>
+                            <li>If Users or Vendors have experienced any violation of their rights caused by ENEBA Services provided in
+                                Terms and Conditions and/or Privacy Policy, they have the right to file a complaint. The complaint must
+                                be sent to ENEBA by the Website’s help centre or to e-mail which is specified in Section 13.7. ENEBA
+                                puts its best efforts to have all complaints resolved within 14 (fourteen) days after receiving such.
+                            </li>
+                            <li>In case the User has complaints about the Digital Content purchased subject to the provisions of Section
+                                7.8 they may file a complaint to the Vendor within the help centre functionality available on the
+                                Website. In such cases ENEBA only helps in initiating the complaint procedure and facilitates
+                                communication between disputing parties but does not resolve the complaint.
+                            </li>
+                            <li>If the User purchased the Digital Content and has not reviewed such on ENEBA platform, they may return
+                                such Digital Content provided that the Vendor grants the User a right to return purchased Digital
+                                Content. Vendors shall unequivocally determine and indicate in its terms of sale whether they grant such
+                                right with regard to a given Digital Content or a given User.
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Termination</strong>
+                        <ol>
+                            <li>Users and Vendors can terminate the agreement with ENEBA by removing their Account from the Website. It
+                                can be done by submitting the request at their Account’s system. ENEBA deletes the Account within 7
+                                (seven) days after the day the request was submitted. During this period, the respective User or Vendor
+                                has the right to cancel the removal of the Account.&nbsp;
+                            </li>
+                            <li>During the period of agreement termination, the User or Vendor cannot create another Account on the
+                                Website.
+                            </li>
+                            <li>ENEBA can terminate such an agreement by deleting the User’s or Vendor’s Account or blocking its access
+                                to the Website. The access can be blocked if there are any suspicions about illegal actions and it can
+                                last until the circumstances disappear or become eliminated. ENEBA deletes the User’s or Vendor’s
+                                Account in situations where they grossly violate Terms and Conditions, Privacy Policy, laws or other
+                                documents.
+                            </li>
+                            <li>ENEBA may temporarily restrict or suspend access to User’s or Vendor’s Account if its security is
+                                compromised in any way or if significant violations of this agreement or the law (by the Users or
+                                Vendors) are discovered (if ENEBA does not terminate the agreement because of this). Execution of
+                                decisions provided in this Section 12 cannot violate consumer rights.
+                            </li>
+                        </ol>
+                    </li>
+                    <li><strong>Final Provisions</strong>
+                        <ol>
+                            <li>Privacy Policy and any other Website’s documentation are integral part of these Terms and Conditions and
+                                bind all Users and Vendors.
+                            </li>
+                            <li>Without the permission of ENEBA, Users have no right to transfer their obligations, claims or rights to
+                                third persons. Users agree that ENEBA shall have the right to transfer its rights and obligations
+                                arising from the agreements to third persons. ENEBA will inform of such transfer on the Website.
+                            </li>
+                            <li>If any provision of these Terms and Conditions is held to be illegal, invalid or unenforceable by a
+                                court or arbitral tribunal, the other provisions of these Terms and Conditions will remain in full force
+                                and effect. Any provision of these Terms and Conditions held to be illegal, invalid or unenforceable
+                                only in part, or to a certain degree, will remain in full force and effect to the extent that it is not
+                                held illegal, invalid or unenforceable.
+                            </li>
+                            <li>These Terms and Conditions and the relations between ENEBA and Users in respect to these Terms and
+                                Conditions (including the execution, validity, invalidity, implementation and termination of these Terms
+                                and Conditions) are governed by and interpreted in accordance with the laws of the Republic of Lithuania
+                                unless the domestic law applicable to the User being a consumer provides otherwise. Any dispute,
+                                controversy or claim, arising out of or relating to these Terms and Conditions, their breach,
+                                termination or validity shall be finally settled in the respective court of the Republic of Lithuania
+                                subject to the rules of jurisdiction, unless the domestic law applicable to the User being a consumer
+                                provides otherwise.
+                            </li>
+                            <li>Except otherwise provided in these Terms and Conditions, no delay of ENEBA or User to exercise any right
+                                or to perform an obligation under these Terms and Conditions shall be considered as a waiver of such
+                                right or excuse from the performance of such obligation and separate or partial performance of any
+                                obligation. Separate or partial exercise of any right shall not mean that this obligation need not be
+                                performed, or this right may not be exercised in the future.
+                            </li>
+                            <li>All the data and information stored on the Website can be used by ENEBA on purpose to its functioning.
+                            </li>
+                            <li>Communication with ENEBA support proceeds through the e-mail address <a href="mailto:support@eneba.com">support@eneba.com</a>.
+                            </li>
+                            <li>Different countries’ laws may cause unavailability for some Users or Vendors to use respective services
+                                of the Website.
+                            </li>
+                            <li>In the event Terms and Conditions are translated into other languages and if there are differences
+                                between the English version and such translation, the English version shall prevail, unless provided
+                                otherwise or unless such apparent inconsistency arises out of a difference in legal requirements in a
+                                specific jurisdiction.
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="foot">
+    <div class="container">
+        <div class="footer-main-content">
+            <div class="footer-main-1">
+                <h3 class="footer-title">DigitalKeys</h3>
+                <div class="footer-items">
+                    <a href="">ACERCA DE NOSOTROS</a><br>
+                    <a href="">POLÍTICA DE PRIVACIDAD</a><br>
+                    <a href="">TÉRMINOS Y CONDICIONES</a><br>
+                </div>
+            </div>
+            <div class="footer-main-2">
+                <h3 class="footer-title">MI CUENTA</h3>
+                <div class="footer-items">
+                    <a href="">MI CUENTA</a><br>
+                    <a href="">MIS PEDIDOS</a><br>
+                    <br>
+                </div>
+            </div>
+            <div class="footer-main-3">
+                <h3 class="footer-title">AYUDA</h3>
+                <div class="footer-items">
+                    <a href="">FAQ</a><br>
+                    <a href="">SOPORTE</a><br>
+                    <a href="">LOCALIZACIÓN</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="divisoria"><div class="linea-divisoria"></div></div>
+        <div id="redes">
+            <h4>Siguenos en</h4>
+            <a class="btn-red btn-social" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a class="btn-red btn-social" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a class="btn-red btn-social" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="divisoria"><div class="linea-divisoria"></div></div>
+        <div id="copyright" >Copyright &copy; 2021 DigitalKeys - All rights reserved</div>
+    </div>
+</footer>
+</body>
+</html>

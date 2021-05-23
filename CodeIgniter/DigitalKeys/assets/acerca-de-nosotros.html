@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio -  DigitalKey</title>
+    <link rel="icon" href="img/logo4.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="page-top">&nbsp; </div>
+<header class="barra-navegacion pt-2 fixed-top">
+    <nav class="navbar navbar-expand  topbar mb-2">
+        <div class="barra-principal">
+            <div class=" row mx-auto">
+
+                <a class="navbar-brand" href="#page-top"><img class="img-logo" src="img/logo2.png" alt="Logo de la empresa" title="Logo"/></a>
+
+                <form class="d-none d-md-inline-block form-inline mt-3 mw-100 navbar-search barra-busqueda" action="buscarInmueble.php" method="post">
+                    <div class="input-group" data-children-count="1">
+                        <input type="text" id="buscar" name="buscar" class="form-control borde-buscar bg-light border-0 small" placeholder="Buscar">
+                        <div class="input-group-append btn-lupa">
+                            <button class="btn" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="navbar-nav barra-botones">
+
+                    <li class="nav-item dropdown no-arrow d-md-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group" data-children-count="1">
+                                    <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn bg-light" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link" href="mostrarFavoritos.php" id="alertsDropdown" role="button">
+                            <i class="fas fa-fw fa-sign-in-alt"></i>
+                            Inciar Sesion
+                            <span class="badge badge-danger badge-counter"></span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link" href="register.php">
+                            <i class="fas fa-fw fa-address-card"></i>
+                            Registrarse
+                        </a>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="divisoria-2"><div class="linea-divisoria-2"></div></div>
+
+    <!--      <nav class="navbar navbar-expand-lg navbar-light bg-gris-oscuro fixed-top">
+                        <a class="navbar-brand" href="#"><a href="#page-top"><img class="img-logo" src="img/logo.png" alt="Logo de la empresa" title="Logo"/></a></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav> -->
+</header>
+<div class="categorias" >
+    <nav class="navbar navbar-expand-lg mb-1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars burger"></i>
+        </button>
+        <div class="barra-secundaria collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="container flex">
+                <div class="centrar-txt">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="componentes.html#page-top">
+                                PC
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!--<div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="componentes.html#cpu-y-moba">PC GAMES</a>
+                                <a class="dropdown-item" href="componentes.html#memorias">DLC's</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="perifericos.html#page-top">
+                                PLAYSTATION
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!--<div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="perifericos.html#ratones">PS GAMES</a>
+                                <a class="dropdown-item" href="perifericos.html#ratones">PSPLUS</a>
+                                <a class="dropdown-item" href="perifericos.html#teclados">PSNOW</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                XBOX
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="contacto.html#equipo">XBOX GAMES</a>
+                                <a class="dropdown-item" href="contacto.html#localizacion">XBOXLive</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                NINTENDO
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="contacto.html#equipo">GAMES</a>
+                                <a class="dropdown-item" href="contacto.html#equipo">SWITCH</a>
+                                <a class="dropdown-item" href="contacto.html#mensaje">ONLINE</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                Herramientas
+                            </a>
+                            <ul class="bg-morado-azul-item">
+                                <!-- <div class="divisoria-3"><div class="linea-divisoria-2"></div></div> -->
+                                <a class="dropdown-item" href="contacto.html#equipo">Claves <br>Windows</a>
+                                <a class="dropdown-item" href="contacto.html#equipo">Licencias</a>
+                                <a class="dropdown-item" href="contacto.html#mensaje">Office</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link" href="contacto.html#page-top">
+                                Promociones
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="divisoria-2"><div class="linea-divisoria-2"></div></div>
+</div>
+<div class="cuerpo">
+    <div class="container espacidado">
+        <div class="divisoria-2"><h3 class="titulo-h3">POLÍTICA DE PRIVACIDAD</h3><div class="linea-divisoria-4"></div></div>
+
+        <div class="container espacidado">
+            <div class="temas-legales">
+                En cdkeys.com nos especializamos en suministrar claves de CD – para poder ofrecer los precios más bajos y entrega instantánea a través de nuestro sistema automatizado único de entregas. Nuestro objetivo es ofrecer la mayor cantidad de puntos y suscripciones de Xbox live, tarjetas de Playstation Network y juegos/paquetes de expansión para PC a los mejores precios. Nuestro equipo de gestión tiene más de 20 años de experiencia combinada en la industria con habilidades en atención al cliente profesional y brindar a los clientes los productos al menor precio posible. Debido a nuestra extensa y confiable cadena de suministro y poder de adquisición, en cdkeys.com tenemos un gran volumen agregado de ventas - ¡y le otorgamos estas reducciones para así ofrecer el mejor precio del mercado!
+
+
+                Podemos ofrecer un servicio sin compromisos pues solo nos encargamos del envío digital de claves de CD. La clave de CD es el número de serial o código de producto, conformado por una combinación de letras y números, que se usa para activar un producto y que normalmente se encuentra en una etiqueta dentro del empaque del juego o impreso en la ficha de referencia del mismo. La clave de CD comprada se usa para registrar y activar el juego correspondiente. Dependiendo del producto, suministramos el código digitalizado o en formato de texto.
+
+                Hemos desarrollado un sistema único de entrega de claves de CD que permite una asignación de las mismas automática e instantánea. Una vez que el cliente realiza el pago y este se verifica, la clave de CD aparece en su cuenta de cdkeys.com y su email, lo que permite a nuestros clientes experimentar un servicio rápido, eficiente y personal – cuando lo deseen.
+
+
+                Pago:
+
+                Paypal – Simple, Seguro e Inmediato
+                Los precios se muestran en las monedas más importantes dependiendo de su ubicación geográfica, y se cobran en Libras Inglesas (GBP) o Dólares Estadounidenses (USD).
+
+
+                Entrega Digital:
+
+                Todos nuestros productos se entregan digitalmente a través de nuestro sistema en líneas en tan solo segundos
+                Todas las órdenes están sujetas a verificación de seguridad que podría ocasionar un breve retraso
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="foot">
+    <div class="container">
+        <div class="footer-main-content">
+            <div class="footer-main-1">
+                <h3 class="footer-title">DigitalKeys</h3>
+                <div class="footer-items">
+                    <a href="">ACERCA DE NOSOTROS</a><br>
+                    <a href="">POLÍTICA DE PRIVACIDAD</a><br>
+                    <a href="">TÉRMINOS Y CONDICIONES</a><br>
+                </div>
+            </div>
+            <div class="footer-main-2">
+                <h3 class="footer-title">MI CUENTA</h3>
+                <div class="footer-items">
+                    <a href="">MI CUENTA</a><br>
+                    <a href="">MIS PEDIDOS</a><br>
+                    <br>
+                </div>
+            </div>
+            <div class="footer-main-3">
+                <h3 class="footer-title">AYUDA</h3>
+                <div class="footer-items">
+                    <a href="">FAQ</a><br>
+                    <a href="">SOPORTE</a><br>
+                    <a href="">LOCALIZACIÓN</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="divisoria"><div class="linea-divisoria"></div></div>
+        <div id="redes">
+            <h4>Siguenos en</h4>
+            <a class="btn-red btn-social" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a class="btn-red btn-social" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a class="btn-red btn-social" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="divisoria"><div class="linea-divisoria"></div></div>
+        <div id="copyright" >Copyright &copy; 2021 DigitalKeys - All rights reserved</div>
+    </div>
+</footer>
+</body>
+</html>
